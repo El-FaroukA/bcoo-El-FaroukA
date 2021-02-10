@@ -1,0 +1,23 @@
+@startuml
+class Etudiant {
+    numEtudiant
+    nom
+    prenom
+    dateDeNaissance
+} 
+
+class Cours {
+    titre
+    corpsModule
+}
+
+ class Enseignant {
+     nomE
+     prenomE
+ }
+
+ class Examens {
+     date
+     coefficient
+ }
+@enduml
