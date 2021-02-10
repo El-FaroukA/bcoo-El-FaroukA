@@ -20,4 +20,8 @@ class Cours {
      date
      coefficient
  }
+ 
+  Etudiant "0..*"--->"1" Examens
+ Enseignant "1" ---> "*" Cours
+ Etudiant "0..*" --> "1"Cours
 @enduml
