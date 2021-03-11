@@ -1,0 +1,34 @@
+@startuml
+class Proprietaire {
+    nom
+    adresse
+}
+class Chien {
+    nom
+    dateDeNaissance
+    sexe
+}
+class Race {
+}
+class Ville {
+    dateOrg
+}
+
+class Concours {
+    classement
+}
+class Participer {
+    dateParticipation
+}
+class Posseder{
+    dateDePossession
+}
+
+Proprietaire "0..*" -- "1..10" Chien
+Chien "0..10" -- "2..*" Concours
+Chien  --  "1" Race
+Concours "0..1" -- "*" Ville
+
+(Chien, Proprietaire) . Posseder
+(Chien, Concours) . Participer
+@enduml
